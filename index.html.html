@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyHub - C & OS Learning Hub</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e293b;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #334155;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        .hero {
+            background: linear-gradient(to right, #2563eb, #1d4ed8);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background-color: white;
+            color: var(--primary-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #e2e8f0;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        pre {
+            background-color: #1e293b;
+            color: #f8fafc;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: var(--secondary-color);
+            color: white;
+            margin-top: 3rem;
+        }
+
+        /* Contact Form Styles */
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cbd5e1;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-group button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .form-group button:hover {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>StudyHub 🚀</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#notes">Notes</a>
+            <a href="#code">C-Codes</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h2>Your One-Stop CS Study Hub</h2>
+        <p>Access Operating Systems notes, C programming snippets, and exam resources instantly.</p>
+        <a href="#notes" class="btn">Explore Resources</a>
+    </section>
+
+    <!-- Main Content Container -->
+    <div class="container">
+
+        <!-- Notes Section -->
+        <section id="notes" style="margin-bottom: 4rem;">
+            <h2 class="section-title">Core Subjects Notes</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Operating Systems (OS)</h3>
+                    <p>Learn core concepts like Process Management, CPU Scheduling Algorithms (FCFS, SJF, Round Robin), Deadlocks, and Memory Management.</p>
+                    <a href="#" style="color: var(--primary-color); font-weight: bold; text-decoration: none;">Download Notes &rarr;</a>
+                </div>
+                <div class="card">
+                    <h3>C Programming</h3>
+                    <p>Master pointers, structures, file handling, dynamic memory allocation, and essential algorithms logic with clear explanations.</p>
+                    <a href="#" style="color: var(--primary-color); font-weight: bold; text-decoration: none;">View Tutorials &rarr;</a>
+                </div>
+                <div class="card">
+                    <h3>Computer Networks</h3>
+                    <p>Understand the OSI Layer, TCP/IP Model, IP Addressing, Subnetting, and basic network security fundamentals.</p>
+                    <a href="#" style="color: var(--primary-color); font-weight: bold; text-decoration: none;">Download Notes &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Code Snippet Library -->
+        <section id="code" style="margin-bottom: 4rem;">
+            <h2 class="section-title">Popular C Code Snippets</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Check Prime Number</h3>
+                    <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    int n = 11, isPrime = 1;
+    for(int i = 2; i &lt;= n/2; i++) {
+        if(n % i == 0) { isPrime = 0; break; }
+    }
+    if(isPrime) printf("Prime");
+    else printf("Not Prime");
+    return 0;
+}</code></pre>
+                </div>
+                <div class="card">
+                    <h3>Factorial using Recursion</h3>
+                    <pre><code>#include &lt;stdio.h&gt;
+long factorial(int n) {
+    if (n == 0) return 1;
+    else return n * factorial(n - 1);
+}
+int main() {
+    printf("Factorial: %ld", factorial(5));
+    return 0;
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2 class="section-title">Request Notes / Feedback</h2>
+            <div class="contact-form">
+                <form id="studyForm" onsubmit="handleFormSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" required placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message / Note Request</label>
+                        <textarea id="message" rows="4" required placeholder="Which topic do you want notes for?"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Send Request</button>
+                    </div>
+                </form>
+                <p id="responseMsg" style="color: green; font-weight: bold; text-align: center; margin-top: 10px;"></p>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 StudyHub. Built for CS Students.</p>
+    </footer>
+
+    <!-- JavaScript Interaction -->
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Prevents page reload
+            
+            const name = document.getElementById('name').value;
+            const msgBox = document.getElementById('responseMsg');
+            
+            msgBox.textContent = `Thank you, ${name}! Your request has been received successfully.`;
+            
+            // Clear the form
+            document.getElementById('studyForm').reset();
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                msgBox.textContent = '';
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
